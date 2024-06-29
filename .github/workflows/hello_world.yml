@@ -21,9 +21,9 @@ jobs:
       - name: Hello World
         run: echo "Hello World"
     
-  close-workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Close workflow
-        run: echo "Closing workflow"
-        shell: bash
+  # close-workflow:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Close workflow
+  #       run: echo "Closing workflow"
+  #       shell: bash
