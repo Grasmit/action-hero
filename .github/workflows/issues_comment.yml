@@ -11,3 +11,9 @@ jobs:
       - name: "dump github context"
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
+      - name: Post comment
+        uses: KeisukeYamashita/create-comment@v1
+        with:
+          comment: |
+            Issue title must start with 'ABC-'.
+            Auto-closing this issue.
