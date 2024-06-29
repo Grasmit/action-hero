@@ -1,0 +1,29 @@
+name: Hello World in CICD
+
+on:
+  push:
+    branches:
+      - main
+  
+  pull:
+    branches:
+      - main
+  
+  workflow_dispatch:
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Hello World
+        run: echo "Hello World"
+    
+  close-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close workflow
+        run: echo "Closing workflow"
+        shell: bash
